@@ -17,7 +17,7 @@ def fetch():
     url = request.args.get('url')
     if not url.startswith('http'):
         url = 'http://' + url
-    
+
     try:
         response = requests.get(url)
         response.raise_for_status()
